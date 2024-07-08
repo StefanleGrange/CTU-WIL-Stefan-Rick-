@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Style.css">
+    <title>Document</title>
+    <style>
+        #ListingFilterDiv{
+            margin: 10px auto;
+            background-color: #474787;
+            padding: 10px;
+            width: 90vw;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        #FilterLocation{
+            margin: 0 auto;
+            width: 500px;
+        }
+        #FilterCheckDiv{
+            margin: 10px 0;
+            border: #2C2C54 solid 2px;
+            padding: 5px 15px;
+        }
+        input[type="text"]{
+            text-align: center;
+        }
+        @media screen and (max-width: 600px) {
+
+            #FilterPriceDiv input[type=number], #FilterRoomsDiv input[type=number]{
+                width: 150px;
+            }
+
+        }
+        @media screen and (max-width: 400px) {
+
+            #FilterPriceDiv input[type=number], #FilterRoomsDiv input[type=number]{
+                font-size: 11px;
+                width: 100px;
+            }
+
+        }
+    </style>
+</head>
+<body>
+    <h1>Listings</h1>
+    <nav>
+        <a href="Home.html">Home</a>
+        <a href="Listings.html">Listings</a>
+        <a href="Agents.html">Agents</a>
+
+        <a href="Profile.html" style="float: right;">Profile</a>
+    </nav>
+
+    <!-------------------------------------------- Filter Options found here ------------------------------------>
+    <div id="ListingFilterDiv">
+        <label for="#FilterPriceDiv">Price Range:</label>
+        <div style="display: inline;" id="FilterPriceDiv">
+            <input type="number" id="FilterMinPrice" placeholder="Min Price">
+            <input type="number" id="FilterMaxPrice" placeholder="Max Price">
+        </div>
+
+        <label for="#FilterLocation">City, Suburb or Street:</label>
+        <input type="text" id="FilterLocation" placeholder="(Add / to add more than 1 specification)">
+
+        <label for="#FilterRoomsDiv">Bathrooms and Bedrooms:</label>
+        <div style="display: inline;" id="FilterRoomsDiv">
+            <input type="number" id="FilterBathrooms" placeholder="Bathrooms">
+            <input type="number" id="FilterBedrooms" placeholder="Bedrooms">
+        </div>
+
+        <div style="display: inline;" id="FilterCheckDiv">
+            <input type="checkbox" id="PriceCheckbox" name="FilterCheck">
+            <label for="PriceCheckbox"> Price</label>
+            <input type="checkbox" id="LocationCheckbox" name="FilterCheck">
+            <label for="LocationCheckbox"> Location</label>
+            <input type="checkbox" id="RoomsCheckbox" name="FilterCheck">
+            <label for="RoomsCheckbox"> Rooms</label>
+        </div>
+    </div>
+    
+    <div id="ListingsDiv" class="DynamicDiv">
+        <!---------------------------- Listing cards will be dynamically generated here ------------------>
+    </div>
+
+    <footer>
+        copyright &copy; RealHome Real Estate
+    </footer>
+</body>
+</html>

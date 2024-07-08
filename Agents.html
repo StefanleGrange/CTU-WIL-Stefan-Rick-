@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Style.css">
+    <title>Document</title>
+    <style>
+        #AgentsFilterDiv{
+            margin: 10px auto;
+            background-color: #474787;
+            padding: 10px;
+            width: 90vw;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        #AgentsFilterDiv button{
+            width: 150px;
+        }
+        #AgentsFilterDiv input[type=text]{
+            width: 300px;
+        }
+        @media screen and (max-width: 600px) {
+            #AgentsFilterDiv{
+                font-size: 14px;
+            }
+            #AgentsFilterDiv input[type=text]{
+                width: 200px;
+            }   
+            #AgentsFilterDiv button{
+                width: 100px;
+            }
+        }
+        @media screen and (max-width: 400px) {
+            #AgentsFilterDiv input[type=text]{
+                font-size: 11px;
+                width: 150px;
+            }
+
+        }
+    </style>
+</head>
+<body>
+    <h1>Agents</h1>
+    <nav>
+        <a href="Home.html">Home</a>
+        <a href="Listings.html">Listings</a>
+        <a href="Agents.html">Agents</a>
+
+        <a href="Profile.html" style="float: right;">Profile</a>
+    </nav>
+    <!----------------------------------------- Filter agents by area or name ---------------------------->
+    <div id="AgentsFilterDiv">  
+            <input type="text" id="AgentArea" placeholder="Filter by Area">
+        <div style="display: inline;">
+            <input type="checkbox" id="AreaCheckbox" name="AgentFilterCheck">
+            <label for="AreaCheckbox"> Filter by Area</label>
+        </div>
+
+        <div style="display: inline;">
+            <input type="text" id="AgentName" placeholder="Search Firstname or Surname">
+            <button>Search</button>
+        </div>
+    </div>
+    <div id="agentsListDiv" class="DynamicDiv">
+        <!---------------------------- Agent cards will be dynamically generated here ---------------------->
+    </div>
+    
+    <footer>
+        copyright &copy; RealHome Real Estate
+    </footer>
+</body>
+</html>

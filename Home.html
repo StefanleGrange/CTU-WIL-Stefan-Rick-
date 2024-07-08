@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Style.css">
+    <title>Document</title>
+    <style>
+        #ProfileBtn{
+            float: inline-end;
+            font-size: large;
+        }
+        #WelcomeMessage{
+            text-align: center;
+        }
+        #WelcomeDiv{
+            background-color: #474787;
+            color: #ECECEC;
+        }
+        #inlineBtns{
+            display: flex;
+            justify-content: center;
+        }
+        #inlineBtns button{
+            width: 45%;
+            font-size: large;
+        }
+        #googleMap{
+            width:100%;
+            height:400px;
+            text-align: center;
+        }
+        @media screen and (max-width: 600px) {
+            div{
+                font-size: small;
+            }
+            #inlineBtns button{
+                width: 40%;
+                font-size: small ;
+            }
+            #ProfileBtn{
+            font-size: medium;
+            }
+    
+        }
+    </style>
+
+</head>
+<body>
+    <h1>RealHome</h1>
+    <nav>
+        <a href="Home.html">Home</a>
+        <a href="Listings.html">Listings</a>
+        <a href="Agents.html">Agents</a>
+
+        <a href="Profile.html" style="float: right;">Profile</a>
+    </nav>
+
+    <!-------------------------------- Sign In Button ------------------------------------->
+    <div><button id="ProfileBtn">Log in/Sign up</button></div>
+    <div id="WelcomeDiv"><p id="WelcomeMessage">
+        Welcome to RealHome Real estate
+        <br>Find the perfect home for you
+        <br>Contact us one of our agents to help find your dream home
+
+    </p></div>
+
+    <div id="inlineBtns"> 
+        <button>See listings</button> 
+        <button>See agents' contact info</button>
+    </div>
+    <hr>
+    <!------------------------------------ Embed Google map ------------------------------->
+    <div id="googleMap"> Google Map</div>
+    
+    
+    <footer>
+        copyright &copy; RealHome Real Estate
+    </footer>
+</body>
+</html>

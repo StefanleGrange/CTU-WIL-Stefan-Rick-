@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Style.css">
+    <title>Document</title>
+    <style>
+        #EditProfBtn, #LogOutBtn{
+            margin: 10px;
+        }
+        #ProfileInfo input[type=text], input[type=email]{
+            width: 300px;
+            margin-bottom: 10px;
+        }
+        #ProfileInfo{
+            margin: 10px auto;
+            background-color: #AAABB8;
+            padding: 10px;
+            width: 90vw;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        #ProfileInfo label{
+            color: #2C2C54;
+        }
+        #WishlistDiv{
+            margin: 10px auto;
+            background-color: #474787;
+            padding: 10px;
+            width: 90vw;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .ProfLabel{
+            color: black;
+            text-align: center;
+            font-size: x-large;
+        }
+        @media screen and (max-width: 600px) {
+            #ProfileInfo input[type=text], input[type=email]{
+                width: 300px;
+                margin-bottom: 5px;
+            }
+            .ProfLabel{
+                font-size: large;
+            }
+        }
+        @media screen and (max-width: 400px){
+            #ProfileInfo input[type=text], input[type=email]{
+                width: 250px;
+                margin-bottom: 5px;
+            }
+            .ProfLabel{
+                font-size: medium;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Profile</h1>
+    <nav>
+        <a href="Home.html">Home</a>
+        <a href="Listings.html">Listings</a>
+        <a href="Agents.html">Agents</a>
+
+        <a href="Profile.html" style="float: right;">Profile</a>
+    </nav>
+    <div style="display: inline;">
+        <button id="EditProfBtn">Edit Profile</button>
+        <button style="float: right;" id="LogOutBtn">Log Out</button>
+    </div>
+
+    <label for="ProfileInfo" class="ProfLabel">Profile Information</label>
+    <div id="ProfileInfo">
+        <label for="FirstnameProf">Firstname:</label>
+        <input type="text" id="FirstnameProf" disabled>
+
+        <label for="LastnameProf">Lastname:</label>
+        <input type="text" id="LastnameProf" disabled>
+        
+        <label for="EmailProf">Email:</label>
+        <input type="email" id="EmailProf" disabled>
+        
+        <label for="PhoneProf">Phone:</label>
+        <input type="text" id="PhoneProf" disabled>
+
+    </div>
+
+    <label for="WishlistDiv" class="ProfLabel">Wishlist</label>
+    <div id="WishlistDiv" class="DynamicDiv">
+        <!----------------------------------------- Wishlisted Lisdting will Show here ------------------------------->
+    </div>
+    
+    <footer>
+        copyright &copy; RealHome Real Estate
+    </footer>
+</body>
+</html>
