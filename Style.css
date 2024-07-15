@@ -67,11 +67,21 @@ label{
 }
 .DynamicDiv{
     margin: 10px auto;
-    padding: 10px;
+    padding: 1%;
     width: 90vw;
     height: fit-content;
     background-color: #474787;
     border-radius: 5px;
+}
+
+.AgentCard{
+    padding: 5px;
+    width: 98%;
+    background-color: #2C2C54;
+    border: #4747ca solid 4px;
+    border-radius: 5px;
+    text-align: center;
+    color: white;
 }
 
 
