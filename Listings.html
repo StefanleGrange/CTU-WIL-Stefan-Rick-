@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="Style.css">
+    <link rel="stylesheet" href="include/Style.css">
     <title>Document</title>
     <style>
         #ListingFilterDiv{
@@ -62,8 +62,8 @@
             <input type="number" id="FilterMaxPrice" placeholder="Max Price">
         </div>
 
-        <label for="#FilterLocation">City, Suburb or Street:</label>
-        <input type="text" id="FilterLocation" placeholder="(Add / to add more than 1 specification)">
+        <label for="#FilterLocation">Street,Suburb,City:</label>
+        <input type="text" id="FilterLocation" placeholder="(Add , to add more than 1 specification)">
 
         <label for="#FilterRoomsDiv">Bathrooms and Bedrooms:</label>
         <div style="display: inline;" id="FilterRoomsDiv">
@@ -76,8 +76,13 @@
             <label for="PriceCheckbox"> Price</label>
             <input type="checkbox" id="LocationCheckbox" name="FilterCheck">
             <label for="LocationCheckbox"> Location</label>
-            <input type="checkbox" id="RoomsCheckbox" name="FilterCheck">
+            <input type="checkbox" id="RoomsCheckbox" name="FilterCheck" >
             <label for="RoomsCheckbox"> Rooms</label>
+        </div>
+
+        <div style="display: inline;">
+            <button id="listingSearchBtn">Search</button>
+            <button id="listingClearSearch">Clear Search</button>
         </div>
     </div>
     
@@ -88,5 +93,6 @@
     <footer>
         copyright &copy; RealHome Real Estate
     </footer>
+    <script type="module" src="listings.js"></script>
 </body>
 </html>

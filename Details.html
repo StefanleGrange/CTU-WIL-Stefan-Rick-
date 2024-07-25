@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="Style.css">
+    <link rel="stylesheet" href="include/Style.css">
     <title>Details</title>
     <style>
         #ListingDetails{
@@ -13,14 +13,15 @@
             padding: 10px;
             color: #2C2C54;
         }
-        img{
+        #mapDIV{
             width: 500px;
             height: 500px;
             object-fit: cover;
             margin-right: 20px;
+            float: left;
         }
         @media screen and (max-width: 600px) {
-            img{
+            #mapDIV{
                 width: 100%;
                 height: 150px;
                 margin-right: 10px;
@@ -43,7 +44,7 @@
     
     
     <p id="ListingDetails">
-        <img src="" alt="" style="float: left;">
+        <div id="mapDIV"></div>
         <!--------------------------------Property details generate here------------------------------------->
     </p>
 

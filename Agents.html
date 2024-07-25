@@ -3,8 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="Style.css">
-    
+    <link rel="stylesheet" href="include/Style.css">    
     <title>Document</title>
     <style>
         #AgentsFilterDiv{
@@ -53,7 +52,7 @@
     </nav>
     <!----------------------------------------- Filter agents by area or name ---------------------------->
     <div id="AgentsFilterDiv">  
-            <input type="text" id="AgentArea" placeholder="Filter by Area">
+            <input type="text" id="AgentArea" placeholder="Filter by City">
         <div style="display: inline;">
             <input type="checkbox" id="AreaCheckbox" name="AgentFilterCheck">
             <label for="AreaCheckbox"> Filter by Area</label>
@@ -61,7 +60,9 @@
 
         <div style="display: inline;">
             <input type="text" id="AgentName" placeholder="Search Firstname or Surname">
-            <button>Search</button>
+            <button id="agentSearchBtn">Search</button>
+            <br>
+            <button id="agentClearSearch">Clear Search</button>
         </div>
     </div>
     <div id="agentsListDiv" class="DynamicDiv">
@@ -71,8 +72,6 @@
     <footer>
         copyright &copy; RealHome Real Estate
     </footer>
-    <script type="module">
-        import { CreateAgentDIV } from "./database.js";
-    </script>
+    <script type="module" src="agents.js"></script>
 </body>
 </html>
