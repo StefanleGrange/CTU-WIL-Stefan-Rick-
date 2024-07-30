@@ -39,17 +39,28 @@
     <hr>
     <div style="display: inline;">
         <button id="BackBtn">Back</button>
-        <button style="float: right;" id="wlAddRemBtn">Wishlist Add</button>
+        <button style="float: right;" id="wlAddRemBtn">Wishlist</button>
     </div>
     
     
     <p id="ListingDetails">
         <div id="mapDIV"></div>
         <!--------------------------------Property details generate here------------------------------------->
+        <p id="listidpar"></p>
     </p>
 
     <footer>
         copyright &copy; RealHome Real Estate
     </footer>
+    <script>
+        import {wishaddrem} from "Signinup.js"
+        const wlAddRemBtn = document.getElementById("wlAddRemBtn");
+        wlAddRemBtn.addEventListener("click", wishaddrem())
+
+        const BackBtn = document.getElementById("BackBtn");
+        BackBtn.addEventListener("click", () => {
+            window.location.href = "Listings.html";
+        });
+    </script>
 </body>
 </html>

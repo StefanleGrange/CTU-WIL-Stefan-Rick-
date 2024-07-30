@@ -57,6 +57,11 @@
                 font-size: medium;
             }
         }
+
+        #RemoveWishlistBtn {
+    margin-top: 10px;
+}
+
     </style>
 </head>
 <body>
@@ -92,10 +97,66 @@
     <label for="WishlistDiv" class="ProfLabel">Wishlist</label>
     <div id="WishlistDiv" class="DynamicDiv">
         <!----------------------------------------- Wishlisted Lisdting will Show here ------------------------------->
+
     </div>
+
     
     <footer>
         copyright &copy; RealHome Real Estate
     </footer>
 </body>
+
+<script>
+    import {CreateListingDIV} from "include/database.js"
+    import {wishdivfill} from "Signinup.js"
+const express = require('express');
+const app = express();
+
+let prof = null;
+
+// Replace these values with your MySQL database credentials
+    const db = mysql.createPool({
+      host: process.env.MYSQL_HOST,
+      user: process.env.MYSQL_USER,
+      port: process.env.MYSQL_PORT,
+      password: process.env.MYSQL_PASSWORD,
+      database: process.env.MYSQL_DATABASE
+    }).promise();
+
+
+
+    // Create a route to handle the form submission
+app.get('/submit', (req, res) => {
+  // Retrieve form data
+  const Profile_email = req.body.email;
+  const Profile_Password = req.body.password;
+
+  // Perform Details retreaval here (e.g., check email and password against the database)
+  const sql = 'SELECT * FROM Profiles WHERE Profile_email = ? AND Profile_Password = ?';
+    [prof] = db.query(sql, [Profile_email, Profile_Password], (err, result) => {
+    if (err) throw err;
+  });
+});
+
+
+const FirstnameProf =document.getElementById("FirstnameProf");
+    FirstnameProf.value = prof[0].Profile_Firstname;
+
+    const LastnameProf =document.getElementById("LastnameProf");
+    LastnameProf.value = prof[0].Profile_Lastname;
+
+    const EmailProf =document.getElementById("EmailProf");
+    EmailProf.value = prof[0].Profile_email;
+
+    const PhoneProf =document.getElementById("PhoneProf");
+    PhoneProf.value = prof[0].Profile_phonenumber;
+
+
+
+
+document.onload = wishdivfill
+
+
+    </script>
+
 </html>
