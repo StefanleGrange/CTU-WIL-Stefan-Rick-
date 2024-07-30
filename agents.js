@@ -2,7 +2,6 @@ import express from 'express'
 
 import { CreateAgentDIV, SearchAgent } from 'include/database.js'
 
-const express = require('express')
 const app = express()
 
 app.use((err, req, res, next) => {
