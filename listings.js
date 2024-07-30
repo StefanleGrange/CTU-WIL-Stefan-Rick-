@@ -2,7 +2,6 @@ import express from 'express'
 
 import { CreateListingDIV, SearchListings } from 'include/database.js'
 
-const express = require('express')
 const app = express()
 
 app.use((err, req, res, next) => {
