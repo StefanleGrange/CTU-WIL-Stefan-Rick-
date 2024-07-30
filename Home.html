@@ -66,8 +66,8 @@
     </p></div>
 
     <div id="inlineBtns"> 
-        <button>See listings</button> 
-        <button>See agents' contact info</button>
+        <button id="seelist">See listings</button> 
+        <button id="seeagent">See agents' contact info</button>
     </div>
     <hr>
     <!------------------------------------ Embed Google map ------------------------------->
@@ -76,5 +76,11 @@
     <footer>
         copyright &copy; RealHome Real Estate
     </footer>
+    <Script>
+        document.getElementById("ProfileBtn").addEventListener("click", redirect ('Profile.html'));
+        document.getElementById("seelist").addEventListener("click", redirect ('Listings.html'));
+        document.getElementById("seeagent").addEventListener("click", redirect ('Agents.html'));
+
+    </Script>
 </body>
 </html>
